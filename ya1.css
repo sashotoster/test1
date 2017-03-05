@@ -24,17 +24,16 @@
 .middle {
 	min-height: calc(100vh - var(--navbars-height)*2);
 	width: 100%;
-	//height: inherit;
+    display: flex;
+    x-justify-content: space-around;
+    x-align-items: stretch;
 }
 
 .sidebar {
-	float: right;
-	width: 300px;
 	opacity: 1;
 	border-left: 1px solid #ccc;
 	min-height: inherit;
-    height: 100%;
-    position: relative;
+    flex: 0 0 300px;
 	box-shadow: -15px 0px 5px -3px rgba(51, 51, 51, 0.5);
 	transition-timing-function: linear;
 	transition: width 250ms, opacity 250ms;	
