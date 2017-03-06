@@ -9,13 +9,13 @@ $(function () {
 		if (scTop > sidebarContentBottom) {
 			if (!$('.sidebar').hasClass('faded')) {
 				$('.sidebar').addClass('faded');
-				$('.sidebar').fadeOut();
+				//$('.sidebar').fadeOut();
 				setMinHeight('.main-content', middleHeight);
 			}		
 		} else {
 			if ($('.sidebar').hasClass('faded')) {
 				$('.sidebar').removeClass('faded');
-				$('.sidebar').fadeIn();				
+				//$('.sidebar').fadeIn();				
 			}
 		}
 	});
