@@ -1,9 +1,6 @@
 $(function () {
 	
-	//var mcth = $('.main-content>.test-content').height();
-	
-	
-	//$('.sidebar').height($('.main-content').height());
+
     var middleHeight = $('.middle').height(), 
         sidebarContentBottom = $('.sidebar>.test-content').offset().top + $('.sidebar>.test-content').height();
 	
