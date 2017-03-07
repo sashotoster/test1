@@ -44,7 +44,7 @@
 .main-content {
 	min-height: inherit;
 	padding: 10px 15px calc(10px + var(--navbars-height)) 10px;
-	width: 100%;
+	width: auto;
 
 }
 
@@ -87,6 +87,10 @@
 	min-height: 0px;
 	max-height: fit-content;
 	padding-bottom: 0px;
+	flex:none;
+	float: right;
+	width: 300px;
+	opacity: 0;
 }
 
 

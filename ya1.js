@@ -8,14 +8,13 @@ $(function () {
 		var scTop = $(window).scrollTop();
 		if (scTop > sidebarContentBottom) {
 			if (!$('.sidebar').hasClass('faded')) {
-				$('.sidebar').addClass('faded');
-				//$('.sidebar').fadeOut();
+				$('.sidebar').insertBefore('.main-content>.test-content').addClass('faded');
 				setMinHeight('.main-content', middleHeight);
+				
 			}		
 		} else {
 			if ($('.sidebar').hasClass('faded')) {
-				$('.sidebar').removeClass('faded');
-				//$('.sidebar').fadeIn();				
+				$('.sidebar').insertAfter('.main-content').removeClass('faded');			
 			}
 		}
 	});
