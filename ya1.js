@@ -23,24 +23,23 @@ $(function () {
 	$('.login').click(function () {
 		$('.main').addClass('covered');
 		$('.popup').css('display', 'inline-block');
-        $('html, body').css({
-            overflow: 'hidden',
-            height: '100%'
-        });
-		//disableScroll();
+		setScrollCss('hidden', '100%');
 	});
 	$('.cancel').click(function () {
 		$('.main').removeClass('covered');
 		$('.popup').css('display', 'none');
-             $('html, body').css({
-                overflow: 'auto',
-                height: 'auto'
-            });       
-		//enableScroll();
+		setScrollCss('auto', 'auto');     
 	});	
 	
 	function setMinHeight (el, h) {
 		$(el).css('min-height', middleHeight);
+	}
+	
+	function setScrollCss (ofw, h) {
+		 $('html, body').css({
+			overflow: ofw,
+			height: h
+		});  		
 	}
 	
 	
