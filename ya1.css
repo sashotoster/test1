@@ -101,4 +101,7 @@
 		opacity: 0;
 		transition-timing-function: ease-out;	
 	}
+	.sidebar>.test-content{
+		width: 0px;	
+	}	
 }
