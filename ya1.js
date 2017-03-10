@@ -1,20 +1,20 @@
 $(function () {
-	
 
     var middleHeight = $('.middle').height(), 
-        sidebarContentBottom = $('.sidebar>.test-content').offset().top + $('.sidebar>.test-content').height();
+        sidebarContentBottom = $('.sidebar-content').offset().top + $('.sidebar-content').height();
 	
 	$(window).scroll(function () {
 		var scTop = $(window).scrollTop();
 		if (scTop > sidebarContentBottom) {
 			if (!$('.sidebar').hasClass('faded')) {
-				$('.sidebar').insertBefore('.main-content>.test-content').addClass('faded');
-				setMinHeight('.main-content', middleHeight);
-				
+				$('.sidebar').addClass('faded').removeClass('sidebar-default');
+                $('.main-content').removeClass('main-content-default');
+				setMinHeight('.main-content', middleHeight);	
 			}		
 		} else {
 			if ($('.sidebar').hasClass('faded')) {
-				$('.sidebar').insertAfter('.main-content').removeClass('faded');			
+				$('.sidebar').removeClass('faded').addClass('sidebar-default');		
+                $('.main-content').addCLass('main-content-default');
 			}
 		}
 	});
