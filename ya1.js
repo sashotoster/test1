@@ -1,15 +1,16 @@
 $(function () {
     
-    const main = $('.main');
-    const mainContent = $('.main-content');
-    const popup = $('.popup');
-    const mcHeight = mainContent.height();    
-    const sidebar = $('.sidebar');
-    const sidebarContent = $('.sidebar-content'); 
-    const scBottom = sidebarContent.offset().top + sidebarContent.height();
+    var main = $('.main');
+    var mainContent = $('.main-content');
+    var popup = $('.popup');
+    var mcHeight = mainContent.height();    
+    var sidebar = $('.sidebar');
+    var sidebarContent = $('.sidebar-content');
+    
+    var scBottom = sidebarContent.offset().top + sidebarContent.height();
 	
 	$(window).scroll(function () {
-		const sTop = $(window).scrollTop();
+		var sTop = $(window).scrollTop();
 		if (sTop > scBottom) {
 			if (!sidebar.hasClass('sidebar-cut')) {
 				sidebar.addClass('sidebar-cut').removeClass('sidebar-default');
