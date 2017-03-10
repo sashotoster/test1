@@ -6,14 +6,14 @@ $(function () {
 	$(window).scroll(function () {
 		var scTop = $(window).scrollTop();
 		if (scTop > sidebarContentBottom) {
-			if (!$('.sidebar').hasClass('faded')) {
-				$('.sidebar').addClass('faded').removeClass('sidebar-default');
+			if (!$('.sidebar').hasClass('sidebar-cut')) {
+				$('.sidebar').addClass('sidebar-cut').removeClass('sidebar-default');
                 $('.main-content').removeClass('main-content-default');
 				setMinHeight('.main-content', middleHeight);	
 			}		
 		} else {
-			if ($('.sidebar').hasClass('faded')) {
-				$('.sidebar').removeClass('faded').addClass('sidebar-default');		
+			if ($('.sidebar').hasClass('sidebar-cut')) {
+				$('.sidebar').removeClass('sidebar-cut').addClass('sidebar-default');		
                 $('.main-content').addClass('main-content-default');
                 setMinHeight('.main-content', '');	
 			}
