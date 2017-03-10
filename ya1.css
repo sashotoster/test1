@@ -32,7 +32,6 @@
 .sidebar {
 	opacity: 1;
 	border-left: 1px solid #ccc;
-	min-height: inherit;	
 	box-shadow: -15px 0px 5px -3px rgba(51, 51, 51, 0.5);
 	transition-timing-function: linear;	
 	transition: opacity 250ms;	
@@ -52,7 +51,7 @@
 }
 
 .main-content {
-	padding: 0px 15px var(--navbars-height) 10px;
+	padding-bottom: var(--navbars-height);
 }
 
 .main-content-default {
@@ -61,7 +60,7 @@
 
 .text {
 	overflow: inherit;
-	padding: 10px 10px 0px 10px;
+	padding: 10px 0px 0px 10px;
 }
 
 .bottom {
@@ -99,10 +98,7 @@
 }
 
 .faded {
-	min-height: 0px;
-	max-height: fit-content;
 	padding-bottom: 0px;
-	width: 300px;
 	opacity: 0;
 }
 

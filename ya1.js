@@ -15,6 +15,7 @@ $(function () {
 			if ($('.sidebar').hasClass('faded')) {
 				$('.sidebar').removeClass('faded').addClass('sidebar-default');		
                 $('.main-content').addClass('main-content-default');
+                setMinHeight('.main-content', '');	
 			}
 		}
 	});
@@ -31,7 +32,7 @@ $(function () {
 	});	
 	
 	function setMinHeight (el, h) {
-		$(el).css('min-height', middleHeight);
+		$(el).css('min-height', h);
 	}
 	
 	function setScrollCss (ofw, h) {
