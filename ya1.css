@@ -102,12 +102,9 @@
 	min-height: 0px;
 	max-height: fit-content;
 	padding-bottom: 0px;
-	flex:none;
-	float: right;
 	width: 300px;
 	opacity: 0;
 }
-
 
 
 @media all and (max-width: 700px) {
