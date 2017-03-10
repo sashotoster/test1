@@ -1,38 +1,43 @@
 $(function () {
-
-    var middleHeight = $('.middle').height(), 
-        sidebarContentBottom = $('.sidebar-content').offset().top + $('.sidebar-content').height();
+    
+    const main = $('.main');
+    const mainContent = $('.main-content');
+    const popup = $('.popup');
+    const mcHeight = mainContent.height();    
+    const sidebar = $('.sidebar');
+    const sidebarContent = $('.sidebar-content'); 
+    const scBottom = sidebarContent.offset().top + sidebarContent.height();
 	
 	$(window).scroll(function () {
-		var scTop = $(window).scrollTop();
-		if (scTop > sidebarContentBottom) {
-			if (!$('.sidebar').hasClass('sidebar-cut')) {
-				$('.sidebar').addClass('sidebar-cut').removeClass('sidebar-default');
-                $('.main-content').removeClass('main-content-default');
-				setMinHeight('.main-content', middleHeight);	
+		const sTop = $(window).scrollTop();
+		if (sTop > scBottom) {
+			if (!sidebar.hasClass('sidebar-cut')) {
+				sidebar.addClass('sidebar-cut').removeClass('sidebar-default');
+                mainContent.removeClass('main-content-default');
+				setMinHeight(mainContent, mcHeight);	
 			}		
 		} else {
-			if ($('.sidebar').hasClass('sidebar-cut')) {
-				$('.sidebar').removeClass('sidebar-cut').addClass('sidebar-default');		
-                $('.main-content').addClass('main-content-default');
-                setMinHeight('.main-content', '');	
+			if (sidebar.hasClass('sidebar-cut')) {
+				sidebar.removeClass('sidebar-cut').addClass('sidebar-default');		
+                mainContent.addClass('main-content-default');
+                setMinHeight(mainContent, '');	
 			}
 		}
 	});
 	
 	$('.login').click(function () {
-		$('.main').addClass('covered');
-		$('.popup').css('display', 'inline-block');
+		main.addClass('covered');
+		setDisplay(popup, 'inline-block');
 		setScrollCss('hidden', '100%');
 	});
 	$('.cancel').click(function () {
-		$('.main').removeClass('covered');
-		$('.popup').css('display', 'none');
+        main.removeClass('covered');
+		setDisplay(popup, 'none');
 		setScrollCss('auto', 'auto');     
 	});	
 	
 	function setMinHeight (el, h) {
-		$(el).css('min-height', h);
+		el.css('min-height', h);
 	}
 	
 	function setScrollCss (ofw, h) {
@@ -41,6 +46,10 @@ $(function () {
 			height: h
 		});  		
 	}
+    
+    function setDisplay (el, d) {
+        el.css('display', d);
+    }
 	
 	
 });
