@@ -14,7 +14,7 @@ $(function () {
 		} else {
 			if ($('.sidebar').hasClass('faded')) {
 				$('.sidebar').removeClass('faded').addClass('sidebar-default');		
-                $('.main-content').addCLass('main-content-default');
+                $('.main-content').addClass('main-content-default');
 			}
 		}
 	});
